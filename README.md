@@ -16,12 +16,15 @@ The result was decent training accuracy and validation accuracy.
 **3. My approach**
 
 - After my initial test with the resnet18 in the guide, I decided to use deeper model.
+
 - Initially, I used resnet50 with some additional transformations.
-- After around 100 epochs with a learning rate of 1e-3, I achieved around ~90% training accuracy and ~80% validation accuracy. 
+  After around 100 epochs with a learning rate of 1e-3, I achieved around ~90% training accuracy and ~80% validation accuracy. 
   However, as I pushed the result onto Kaggle, I only received ~54% accuracy with test set.
+  
 - I tried to push deeper with resnet 152. This time, I ran with ~100 epochs with bigger learning rate (0.01 same as the guide), lowering manually later to 1e-4
   I ended up with a 99.7 training accuracy and 95% validation accuracy.
   I pushed the result to Kaggle with a bit better result of ~66%.
+  
 - Then, I picked the best performing saved epoch and changed the image size to 256 with much lower lr of 1e-5 with additional transformation of GaussianBlur only (on top of the original guide transformations).
   This time, I achieved better result with ~72%.
 
