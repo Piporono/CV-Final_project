@@ -14,7 +14,7 @@ The result was decent training accuracy and validation accuracy.
 
 3. My approach
 
-After my initial test with the resnet18 in the guide, I decided to used deeper model.
+After my initial test with the resnet18 in the guide, I decided to use deeper model.
 I used resnet50 afterwards with some additional transformation.
 After around 100 epochs with a learning rate of 1e-3, I achieved around ~90% training accuracy and ~80% validation accuracy. 
 However, as I pushed the result onto Kaggle, I only received ~54% accuracy with test set.
@@ -26,7 +26,6 @@ Then, I pick the best performing saved epoch,
 and I changed the image size to 256 with much lower lr of 1e-5 with additional transformation of GaussianBlur only 
 (on top of the original guide transformations).
 This time, I achieved better result with ~72%
-
 
 4. Dataset
 
@@ -40,8 +39,8 @@ The result is not as great as I expected, but I have tried my best to improve my
 6. Discussion
 
 - One of the problem for me is the lack of better model and the equipment to run it.
-  Start off, I had wanted to use Efficient Net but my lack of hardware did not allow me to do so.
-  So, I had to settle on using basic resnet from pytorch. I could not even use GrayScale in this resnet.
+  Start off, I wanted to use Efficient Net but couldn't because I don't have sufficient hardware.
+  So, I decided to use basic resnet from pytorch. Another problem is that I can't use GrayScale for this resnet.
 
 - If I kept going with this project, I would like to use B7 efficient_net from Google with longer training time.
 Also, I would be able to use more transformation approaches
